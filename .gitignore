@@ -1,0 +1,17 @@
+# dependencias
+node_modules/
+
+# builds
+dist/
+.turbo/
+
+# entornos y secretos
+.env
+.env.*
+!.env.example
+
+# certificados de desarrollo
+certs/
+
+# datos de docker (por si acaso)
+*.pem

@@ -1,0 +1,32 @@
+Abrí Docker Desktop (la ballenita) y esperá a que diga "Engine running".
+
+2. Levantá la base de datos:
+
+powershell
+cd C:\dev\loyalty
+docker compose up -d
+
+3. Backend (terminal 1):
+
+powershell
+pnpm --filter api run start:dev
+
+Esperá el Nest application successfully started.
+
+4. Frontend (terminal 2, aparte):
+
+powershell
+cd C:\dev\loyalty
+pnpm --filter web run dev
+
+5. Abrí la app con https:// (con la s, por lo de la cámara):
+
+Compu: https://localhost:5173
+Cel: https://192.168.x.x:5173 (la dirección Network que muestra la terminal de Vite)
+
+Si sale la advertencia de seguridad → Avanzado → Continuar.
+
+Recordatorios por si algo no conecta:
+
+Si trabajás en la compu, apps/web/.env debe tener VITE_API_URL=https://localhost:3000. Si vas a probar en el cel, cambialo a la IP (https://192.168.x.x:3000) y reiniciá Vite (los cambios de .env solo aplican al reiniciar).
+Si el login falla, visitá una vez https://localhost:3000 (o la IP en el cel) y dale Continuar para aceptar el certificado.
