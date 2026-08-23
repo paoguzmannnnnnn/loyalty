@@ -1,6 +1,6 @@
 export const theme = {
     brandName: 'The Links',
-    businessId:'0c37c1ad-d4f1-4759-abca-f8914372818b',
+    businessId:'cb381b62-9533-441a-9ade-30d1a48e35b1',
     logo: '⛳',
     stamp: '🏌',
     tagline: 'Tu tarjeta de sellos',
