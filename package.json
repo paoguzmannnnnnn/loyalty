@@ -1,6 +1,7 @@
 {
     "name": "loyalty",
     "private": true,
+    "packageManager": "pnpm@11.1.1",
     "scripts": {
         "dev": "turbo run dev",
         "build": "turbo run build",
