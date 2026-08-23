@@ -23,6 +23,10 @@ import { AuditLog } from './database/entities/audit-log.entity';
         url: config.get<string>('DATABASE_URL'),
         entities: [Business, User, Membership, StampTransaction, AuditLog],
         synchronize: true, // SOLO en desarrollo: crea/actualiza tablas solo
+        ssl:
+          process.env.NODE_ENV === 'production'
+            ? { rejectUnauthorized: false }
+            : false,
       }),
     }), AuthModule, BusinessModule, MembershipModule, StampModule,
   ],
