@@ -27,7 +27,7 @@ export class AuthService {
         name: dto.name,
         email: dto.email,
         passwordHash,
-        role: dto.role ?? 'customer',
+        role: 'customer', // el registro público SIEMPRE crea clientes, sin importar lo que llegue
         });
         await this.users.save(user);
         return this.sign(user);
